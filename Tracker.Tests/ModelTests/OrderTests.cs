@@ -33,5 +33,21 @@ namespace Tracker.Tests
       Assert.AreEqual(title, result);
     }
 
+      [TestMethod]
+      public void SetDescription_SetDescription_String()
+      {
+      //Arrange
+      string description = "";
+      Order newOrder = new Order("", description, 1, "");
+
+      //Act
+      string updatedDescription = "cookies";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   }
 }
