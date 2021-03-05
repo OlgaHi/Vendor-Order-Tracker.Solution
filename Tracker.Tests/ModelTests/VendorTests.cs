@@ -18,15 +18,21 @@ namespace Tracker.Tests
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
-    //Arrange
-    string name = " ";
-    Vendor newVendor = new Vendor(name, "");
+      string name = " ";
+      Vendor newVendor = new Vendor(name, "");
+      string result = newVendor.Name;
+      Assert.AreEqual(name, result);
+    }
 
-    //Act
-    string result = newVendor.Name;
-
-    //Assert
-    Assert.AreEqual(name, result);
+    [TestMethod]
+    public void SetName_ReturnsName_String()
+    {
+      string name = " ";
+      Vendor newVendor = new Vendor(name, "");
+      string updatedName = "Picasso";
+      newVendor.Name = updatedName;
+      string result = newVendor.Name;
+      Assert.AreEqual(updatedName, result);
     }
   }
 }

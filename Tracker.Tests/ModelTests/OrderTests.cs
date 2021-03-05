@@ -19,33 +19,23 @@ namespace Tracker.Tests
     [TestMethod]
     public void GetTitle_ReturnsTitle_Title()
     {
-      //Arrange
       string title = "Pastry";
       string description = "";
       int price = 3;
       string date = "12/02/2000";
-
-      //Act
       Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
-
-      //Assert
       Assert.AreEqual(title, result);
     }
 
-      [TestMethod]
-      public void SetDescription_SetDescription_String()
-      {
-      //Arrange
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
       string description = "";
       Order newOrder = new Order("", description, 1, "");
-
-      //Act
       string updatedDescription = "cookies";
       newOrder.Description = updatedDescription;
       string result = newOrder.Description;
-
-      //Assert
       Assert.AreEqual(updatedDescription, result);
     }
 
