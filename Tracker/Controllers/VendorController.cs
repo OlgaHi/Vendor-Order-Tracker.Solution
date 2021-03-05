@@ -5,12 +5,13 @@ using Tracker.Models;
 
 namespace Tracker.Controllers
 {
-  public class TrackerController : Controller
+  public class VendorsController : Controller
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendor> allVendors = Vendors.GetAll();
-      return View(allVendors);
+      // List<Vendor> allVendors = Vendor.GetAll();
+      return View();
     }
   }
+}

@@ -12,6 +12,12 @@ namespace Tracker.Models
     {
     Name = name;
     Description = description;
+    _instances.Add(this);
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
     }
   }
 }
