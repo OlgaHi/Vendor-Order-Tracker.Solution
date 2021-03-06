@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Tracker.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
-    [HttpGet("/vendors/{vendorId}/order/new")]
+    [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
     Vendor vendor = Vendor.Find(vendorId);
