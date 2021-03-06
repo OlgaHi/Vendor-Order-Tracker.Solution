@@ -64,17 +64,25 @@ namespace Tracker.Tests
     [TestMethod]
     public void Find_ReturnsCorrectVendor_Vendor()
     {
-      string name1 = "Work";
-      string name2 = "School";
-      Vendor newVendor1 = new Vendor(name1);
-      Vendor newVendor2 = new Vendor(name2);
+      string name1 = "Kolosok";
+      string name2 = "Hot bread";
+      Vendor newVendor1 = new Vendor(name1, "");
+      Vendor newVendor2 = new Vendor(name2, "");
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
 
-
-
-
-    
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string vendorName = "Kolosok";
+      Vendor newVendor = new Vendor(vendorName, "");
+      string titleOrder = "Pastry";
+      Order newOrder = new Order(titleOrder, "", 1, "");
+      List<Order> newList = new List<Order> { newOrder }; 
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
