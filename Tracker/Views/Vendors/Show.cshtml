@@ -4,12 +4,19 @@
 
 @using Tracker.Models;
 
+<h3>Here is orders of @Model["vendor"].Name</h3>
+
 @if (@Model["orders"].Count == 0)
 {
   <h3>No orders have been added yet!</h3>
 } 
 
-
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+}
+</ol>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>Return to vendors list</a></p>
