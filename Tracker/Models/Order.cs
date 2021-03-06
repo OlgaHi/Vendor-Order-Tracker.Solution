@@ -22,5 +22,15 @@ namespace Tracker.Models
       _instances.Add(this);
       Id = _instances.Count;
     }
+
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }

@@ -7,8 +7,14 @@ using System;
 namespace Tracker.Tests
 {
   [TestClass]
-  public class OrderTest
+  public class OrderTest : IDisposable
   {
+
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     [TestMethod]
     public void OrderConstructor_CreatesObjectOfOrder_Order()
     {
@@ -39,5 +45,22 @@ namespace Tracker.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string description = "";
+      Order newOrder = new Order("", description, 1, "");
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    } 
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder1 = new Order("", "", 1, "");
+      Order newOrder2 = new Order("", "", 2, "");
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }

@@ -13,10 +13,10 @@ namespace Tracker.Controllers
      return View(vendor);
     }
 
-    [HttpGet("/vandors/{vendorId}/orders/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
-    Odrer order = Order.Find(orderId);
+    Order order = Order.Find(orderId);
     Vendor vendor = Vendor.Find(vendorId);
     Dictionary<string, object> model = new Dictionary<string, object>();
     model.Add("order", order);
