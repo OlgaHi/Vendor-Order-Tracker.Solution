@@ -1,19 +1,19 @@
-body {
-    background-color: #f7c7a8;
-}
+
+
 h1 {
     font-size: 4em;
     margin-top: 14%;
     text-align: center;
 }
 
-#create {
+#checkVendors {
     font-size: 2.5em;
     display: block;
     margin: auto;
     margin-top: 3%;
+    text-align: center;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration:chartreuse;
 }
