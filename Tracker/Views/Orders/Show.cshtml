@@ -3,11 +3,20 @@
 }
 
 <h1>Order details: </h1>
-
-<h2>@Model["order"].Title</h2>
-<h3>@Model["order"].Description</h3>
-<h3>@Model["order"].Price</h3>
-<h3>@Model["order"].Date</h3>
-
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/vendors'>View all vendors</a>
+<div class="container">
+  <div class="col d-flex justify-content-center">
+  <div class ="class="card" style="width: 18rem;">
+    <img src="~/img/bakeryorder.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">@Model["order"].Title</h5>
+      <p class="card-text">@Model["order"].Description</p>
+      <p class="card-text">@Model["order"].Price</p>
+      <p class="card-text">@Model["order"].Date</p>
+    </div>
+  </div>
+  </div>
+ 
+  <h4><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</h4></p>
+  <h4></p><a href='/vendors'>View all vendors</a></h4>
+  
+</div>

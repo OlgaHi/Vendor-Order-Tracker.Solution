@@ -3,14 +3,24 @@
 }
 
 <h1>Add a vendor</h1>
-<p>Add a vendor here:</p>
+<div class="container">
+  <form action="/vendors" method="post">
+    <div class="input-group">
+      <span class="input-group-text">Vendor name</span>
+        <input type="text" aria-label="Vendor name" class="form-control" id="vendorName" name="vendorName" type="text">
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Vendor description</span>
+        <input type="text" aria-label="Vendor description" class="form-control" id="vendorDescription" name="vendorDescription" type="text">
+    </div>
+    <div class="d-grid gap-2 d-md-block">
+      <br>
+      <button type="submit" class="btn btn-secondary">Add</button>
+    </div>
+  </form>
+  <br>
+  <p><a href="/">Back home</a></p>
+</div>
 
-<form action="/vendors" method="post">
-  <label for="vendorName">Vendor name</label>
-  <input id="vendorName" name="vendorName" type="text">
-  <label for="vendorDescription">Vendor description</label>
-  <input id="vendorDescription" name="vendorDescription" type="text">
-  <button type="submit">Add</button>
-</form>
 
-<p><a href="/">Back home</a></p>
+

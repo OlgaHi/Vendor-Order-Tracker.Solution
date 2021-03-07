@@ -1,0 +1,33 @@
+body {
+  background-image: url('../img/background1.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:wheat;
+}
+
+h1 {
+  font-size: 4em;
+  margin-top: 14%;
+  text-align: center;
+  
+}
+
+h3, h4 {
+  font-size: 2.5em;
+  display: block;
+  margin: auto;
+  margin-top: 3%;
+  text-align: center;
+  
+}
+
+a {
+  color:wheat;
+}
+
+.input-group {
+  margin-top: 1%;
+}
+
+
